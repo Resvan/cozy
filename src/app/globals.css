@@ -25,3 +25,34 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@-webkit-keyframes leap {
+  50% {
+    transform: translateY(-50%) rotate(-15deg);
+  }
+}
+@keyframes leap {
+  50% {
+    transform: translateY(-50%) rotate(-15deg);
+  }
+}
+
+
+.wobble span {
+  display: inline-block;
+  pointer-events: none;
+}
+.wobble span.leap {
+  -webkit-animation: leap 0.7s 1;
+          animation: leap 0.7s 1;
+}
+
+.info {
+  background: #f6f6f6;
+  padding: 30px;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  box-shadow: 0 20px 50px -45px #333;
+  max-width: 600px;
+}
+
