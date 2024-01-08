@@ -35,7 +35,7 @@ const Card = () => {
           >
             <h1 className="text-white text-lg font-bold">RESEARCH REPORT</h1>
             <h1 className="text-white text-4xl font-bold mt-10">Accenture Life Trends 2024</h1>
-            <p className='mt-10 text-xl'>'We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?'</p>
+            <p className='mt-10 text-xl'>We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?</p>
             <motion.div
             className="absolute bottom-10 right-6 cursor-pointer"
             whileHover={{ scale: 1.1 }}
@@ -70,7 +70,7 @@ const Card = () => {
           >
             <h1 className="text-white text-lg font-bold">RESEARCH REPORT</h1>
             <h1 className="text-white text-4xl font-bold mt-10">Accenture Life Trends 2024</h1>
-            <p className='mt-10 text-xl'>'We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?'</p>
+            <p className='mt-10 text-xl'>We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?</p>
             <motion.div
             className="absolute bottom-10 right-6 cursor-pointer"
             whileHover={{ scale: 1.1 }}
@@ -105,7 +105,7 @@ const Card = () => {
           >
             <h1 className="text-white text-lg font-bold">RESEARCH REPORT</h1>
             <h1 className="text-white text-4xl font-bold mt-10">Accenture Life Trends 2024</h1>
-            <p className='mt-10 text-xl'>'We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?'</p>
+            <p className='mt-10 text-xl'>We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?</p>
             <motion.div
             className="absolute bottom-10 right-6 cursor-pointer"
             whileHover={{ scale: 1.1 }}
@@ -140,7 +140,7 @@ const Card = () => {
           >
             <h1 className="text-white text-lg font-bold">RESEARCH REPORT</h1>
             <h1 className="text-white text-4xl font-bold mt-10">Accenture Life Trends 2024</h1>
-            <p className='mt-10 text-xl'>'We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?'</p>
+            <p className='mt-10 text-xl'>We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?</p>
             <motion.div
             className="absolute bottom-10 right-6 cursor-pointer"
             whileHover={{ scale: 1.1 }}
@@ -175,7 +175,7 @@ const Card = () => {
           >
             <h1 className="text-white text-lg font-bold">RESEARCH REPORT</h1>
             <h1 className="text-white text-4xl font-bold mt-10">Accenture Life Trends 2024</h1>
-            <p className='mt-10 text-xl'>'We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?'</p>
+            <p className='mt-10 text-xl'>We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?</p>
             <motion.div
             className="absolute bottom-10 right-6 cursor-pointer"
             whileHover={{ scale: 1.1 }}
@@ -210,7 +210,7 @@ const Card = () => {
           >
             <h1 className="text-white text-lg font-bold">RESEARCH REPORT</h1>
             <h1 className="text-white text-4xl font-bold mt-10">Accenture Life Trends 2024</h1>
-            <p className='mt-10 text-xl'>'We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?'</p>
+            <p className='mt-10 text-xl'>We&apos;re in a state of flux, but there&apos;s hope and unparalleled opportunity. Five trends explore people&apos;s evolving relationships with businesses and technology. What do you need to know to navigate the coming year and beyond?</p>
             <motion.div
             className="absolute bottom-10 right-6 cursor-pointer"
             whileHover={{ scale: 1.1 }}
