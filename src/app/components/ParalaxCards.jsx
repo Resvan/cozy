@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "../../../public/style/style.css";
+import "../components/Cards/style.css";
 import { motion, useAnimation } from "framer-motion";
 import ParalaxCard from "./Cards/firstCard";
 import SecondCard from "./Cards/SecondCard";
@@ -41,7 +41,7 @@ export default function ParalaxCards() {
   };
 
   return (
-    <div className="flex  justify-center">
+    <div className="flex  justify-center mt-80">
 <div className="container ">
       <section className="parallax__group ">
         <div className="parallax__layer parallax__layer--background"></div>
