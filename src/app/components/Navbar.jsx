@@ -47,7 +47,7 @@ const Navbar = () => {
         </motion.div>
 
         {/* Navigation options on the right side */}
-        <div className="flex items-center space-x-4">
+        <div className="md:flex items-center space-x-4 hidden">
           {/* Individual motion.div for each navigation item */}
           <motion.div whileHover={{ scale: 1.1 }}>
             <Link href="/">Home</Link>

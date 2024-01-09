@@ -1,57 +1,59 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
-const WobbleText = () => {
+function SlidingDivs() {
+
+  const parentRef = useRef(null);
+  const [parentWidth, setParentWidth] = useState(0);
+  const [value, setValue] = useState(0);
+
   useEffect(() => {
-    const wobbleElements = document.querySelectorAll(".wobble");
+    if (parentRef.current) {
+      setParentWidth(parentRef.current.offsetWidth);
+    }
+  }, [parentRef]);
 
-    wobbleElements.forEach((el) => {
-      el.addEventListener("mouseover", () => {
-        if (
-          !el.classList.contains("animating") &&
-          !el.classList.contains("mouseover")
-        ) {
-          el.classList.add("animating", "mouseover");
+  const handleMouseMove = (event) => {
+    const clientX = event.clientX;
 
-          const letters = el.innerText.split("");
 
-          setTimeout(() => {
-            el.classList.remove("animating");
-          }, (letters.length + 1) * 50);
+    const normalizedValue = ((clientX - 1) / (parentWidth - 1)) * 25;
+    setValue(normalizedValue);
 
-          const animationName = el.dataset.animation || "jump";
 
-          el.innerText = "";
-
-          letters.forEach((letter, i) => {
-            if (letter === " ") {
-              letter = "\u00A0"; // Non-breaking space
-            }
-            el.innerHTML += `<span class="letter">${letter}</span>`;
-          });
-
-          const letterElements = el.querySelectorAll(".letter");
-          letterElements.forEach((letter, i) => {
-            setTimeout(() => {
-              letter.classList.add(animationName);
-            }, 50 * i);
-          });
-        }
-      });
-
-      el.addEventListener("mouseout", () => {
-        el.classList.remove("mouseover");
-      });
-    });
-  }, []);
+  };
 
   return (
-    <div className="container mx-auto mt-10 ">
-      <h1 className="wobble text-9xl font-black uppercase text-center" data-animation="leap">
-      Reinvent What Your Business Could Be.
-      </h1>
-    </div>
-  );
-};
 
-export default WobbleText;
+      <motion.div
+        ref={parentRef}
+        onMouseMove={handleMouseMove}
+        className="relative container mx-auto mt-10 text-2xl lg:text-9xl text-nowrap uppercase text-center font-black rounded-lg"
+      >
+        <motion.div
+          className="w-4/5 rounded-t-lg"
+          initial={{
+            x: 0,
+          }}
+          animate={{
+            x: `${value}%`,
+          }}
+          transition={{ duration: 0.5 }}
+        >Reinvent What Your</motion.div>
+        <motion.div
+          className="w-4/5 rounded-b-lg"
+          initial={{
+            x: "25%",
+          }}
+          animate={{
+            x: `${25 - value}%`,
+          }}
+          transition={{ duration: 0.5 }}
+        >Business Could Be</motion.div>
+      </motion.div>
+
+  );
+}
+
+export default SlidingDivs;
