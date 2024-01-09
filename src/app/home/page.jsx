@@ -1,8 +1,6 @@
 "use client";
 import * as React from "react";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import styles from "../../../public/style/style.css";
-import "../../../public/style/style.css";
+import "../components/Cards/style.css";
 
 import { motion, useAnimation } from "framer-motion";
 import ParalaxCard from "../components/Cards/firstCard";
