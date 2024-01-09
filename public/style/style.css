@@ -77,7 +77,7 @@
 
 :root {
     --parallax-scale: 0.1; /* pseudo-perspective depth, 0=deactivate */
-    --parallax-min-height: 44rem; /* could be overwritten by JS measurement if too low */
+    --parallax-min-height: 60rem; /* could be overwritten by JS measurement if too low */
     --container-offset-adjustment: 5rem;
   }
   
@@ -86,13 +86,13 @@
     :root {
       --parallax-scale: 0;
     }
-  }
+  } */
   
 
   /* container around parallax layers */
   .parallax__group {
 
-    z-index: -1;
+    z-index: 1;
     /* margin-top: 100px; */
     transform-origin: center top;
     transform: scaleY(calc(1 - var(--parallax-scale)));
@@ -123,7 +123,6 @@
     top: 0;
     margin-top: 700px;
     height: 100%;
-    min-height: 10vh;
     min-height: max(10vh, var(--parallax-min-height));
     background-size: contain;
     background-attachment: fixed; /* legacy browser fallback */
