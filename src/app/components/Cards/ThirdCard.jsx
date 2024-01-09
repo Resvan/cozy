@@ -1,5 +1,4 @@
 import React from "react";
-
 import "../../../../public/style/style.css";
 import { motion, useAnimation } from "framer-motion";
 
@@ -44,47 +43,50 @@ export default function ThirdCard() {
   };
 
   return (
-    <motion.div
-      onClick={() => {
-        handleClick(0);
-      }}
-      onHoverStart={handleHover}
-      onHoverEnd={() => {
-        handleHoverEnd(0);
-      }}
-      className="relative m-8  h-96 lg:w-full  col-start-2 bg-blue-700 overflow-hidden "
-    >
-      <motion.div className=" text-2xl  absolute">
-        <motion.p
-          className="p-5 font-serif inset-x-0 h-full bottom-1 "
-          initial={{ y: 200, opacity: 1 }}
-          animate={controls1}
-          transition={{ duration: 0.5 }}
-        >
-          We’re one of Fortune’s World’s Most Admired Companies
-        </motion.p>
-        <motion.div
-          className="p-5"
-          initial={{ y: 50, opacity: 0 }}
-          animate={controls2}
-          transition={{ duration: 1 }}
-        >
-          <motion.p className="text-xs sm:text-xs md:text-sm" text>
-            For 16 consecutive years, we have been recognized for operating with
-            integrity in everything we do.
+    
+    <div className="grid lg:w-full grid-cols-subgrid gap-4 col-span-3">
+      <motion.div
+        onClick={() => {
+          handleClick(0);
+        }}
+        onHoverStart={handleHover}
+        onHoverEnd={() => {
+          handleHoverEnd(0);
+        }}
+        className="relative m-8  sm: lg:grid-cols-subgrid h-96   lg:col-start-2 md:col-start-2 bg-blue-600 overflow-hidden "
+      >
+        <motion.div className=" text-2xl  absolute">
+          <motion.p
+            className="p-5 font-serif inset-x-0 h-full bottom-1 "
+            initial={{ y: 200, opacity: 1 }}
+            animate={controls1}
+            transition={{ duration: 0.5 }}
+          >
+            We’re one of Fortune’s World’s Most Admired Companies
           </motion.p>
           <motion.div
-            initial={{ y: 0, opacity: 0 }}
-            animate={controls3}
-            transition={{ duration: 1.4 }}
-            className=""
+            className="p-5"
+            initial={{ y: 50, opacity: 0 }}
+            animate={controls2}
+            transition={{ duration: 1 }}
           >
-            <p className="text-xs text-end bottom-0 underlintext pb-3">
-              Expand {">"}
-            </p>
+            <motion.p className="text-xs sm:text-xs md:text-sm" text>
+              For 16 consecutive years, we have been recognized for operating
+              with integrity in everything we do.
+            </motion.p>
+            <motion.div
+              initial={{ y: 0, opacity: 0 }}
+              animate={controls3}
+              transition={{ duration: 1.4 }}
+              className=""
+            >
+              <p className="text-xs text-end bottom-0 underlintext pb-3">
+                Expand {">"}
+              </p>
+            </motion.div>
           </motion.div>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }

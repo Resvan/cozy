@@ -125,7 +125,7 @@
     height: 100%;
     min-height: 10vh;
     min-height: max(10vh, var(--parallax-min-height));
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed; /* legacy browser fallback */
     /* decorative styles unrelated to the parallax effect: */
     background-repeat: no-repeat;
@@ -136,7 +136,7 @@
     /* Black shade at the top */
     &::before {
         content: "";
-        position: absolute;
+   
         top: 0;
         left: 0;
         width: 100%;
@@ -174,8 +174,8 @@
   /* hide imperfect endings behind a gradient */
   .parallax__layer--background::before {
     content: "";
-    display: block;
-    position: absolute;
+    /* display: block; */
+  
     top: 0;
     height: max(100vh, var(--parallax-min-height));
     width: 100%;

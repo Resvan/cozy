@@ -52,7 +52,7 @@ export default function SecondCard() {
         onHoverEnd={() => {
           handleHoverEnd(0);
         }}
-        className="relative m-8  sm: lg:grid-cols-subgrid h-96  w-full lg:col-start-3 md:col-start-3 bg-red-600 overflow-hidden "
+        className="relative m-8  sm: lg:grid-cols-subgrid h-96  lg:w-full lg:col-start-3 md:col-start-3 bg-red-600 overflow-hidden "
       >
         <motion.div className=" text-2xl  absolute">
           <motion.p
