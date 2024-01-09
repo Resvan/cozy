@@ -30,7 +30,7 @@ export default function AnimatedText({
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         transition={{ staggerChildren: 0.1 }}
-        aria-hidden
+        aria-hidden 
       >
         {textArray.map((line, i) => (
           <span key={i} className="block">

@@ -1,5 +1,5 @@
-.background {
-    background: linear-gradient(#e66465, #9198e5);
+/* .background {
+ 
     position: absolute;
     top: 0;
     bottom: 0;
@@ -24,24 +24,7 @@
     border-radius: 10px;
   }
   
-  .parallax {
-    margin-right: 15%;
-  }
-  
-  .sticky {
-    margin-left: 15%;
-    background-color: #ff6d6d;
-  }
-  
-  .blue {
-    background-color: #5b65ad;
-    color: white;
-  }
-  
-  .purple {
-    background-color: #9d65d0;
-  }
-  
+
   @media (max-width: 750px) {
     .card {
       width: 40%;
@@ -56,17 +39,17 @@
     }
   }
   .intro {
-    background-image: url('/images/moon.png');
+    background-image: url('https://marketplace.canva.com/EAE-r1_8QRE/1/0/1600w/canva-black-adn-white-motivation-desktop-walpaper-aVB00RKCCmE.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    color: aliceblue;
+   
 
   }
   /* styles.css */
 
-  .parallax-container {
+  /* .parallax-container {
     overflow: hidden;
     height: 100vh;
   }
@@ -80,13 +63,16 @@
   }
   
   #layer1 {
-    background-color: #f0f0f0; /* Add your background color for the first layer */
+
   }
   
   #layer2 {
     background-position: center;
     background-attachment: fixed;
-  }
+  } */
+
+
+  
   /* contained parallax perspective module */
 
 :root {
@@ -100,13 +86,14 @@
     :root {
       --parallax-scale: 0;
     }
-  }
+  } */
   
+
   /* container around parallax layers */
   .parallax__group {
 
     z-index: -1;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     transform-origin: center top;
     transform: scaleY(calc(1 - var(--parallax-scale)));
     margin-top: calc(
@@ -144,7 +131,7 @@
     background-repeat: no-repeat;
     overflow: auto; /* Ensure the overflow is hidden to hide the shade outside the container */
 
-    background-image: url("/images/moon.png");
+    background-image: url("https://marketplace.canva.com/EAE-r1_8QRE/1/0/1600w/canva-black-adn-white-motivation-desktop-walpaper-aVB00RKCCmE.jpg");
 
     /* Black shade at the top */
     &::before {
@@ -166,7 +153,7 @@
   }
   
   .header, .footer, .content {
-    background-color: white;
+    background-color: rgb(9, 9, 9);
     margin:0;
     padding: 1rem;
   }
@@ -179,8 +166,8 @@
   .card {
     width: 50%;
     padding: 5%;
-    border: solid 1px gray;
-    background: rgba(240,230,220, .9);
+    /* border: solid 1px rgb(14, 14, 14);
+    background: rgba(9, 9, 9, 0.9); */
     margin: 0 0 7rem 1rem;
   }
   
@@ -193,7 +180,7 @@
     height: max(100vh, var(--parallax-min-height));
     width: 100%;
     background: linear-gradient(
-      rgba(255, 255, 255, 1) 0%,
+      /* rgba(255, 255, 255, 1) 0%, */
       rgba(255, 255, 255, 0) 100%
       );
   }
@@ -205,8 +192,8 @@
     height: 4rem;
     width: 100%;
     background: linear-gradient(
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 100%
+      /* rgba(255, 255, 255, 0) 0%, */
+      /* rgba(255, 255, 255, 1) 100% */
       );
   }
 
