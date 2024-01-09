@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "../../../public/style/style.css";
+import "../components/Cards/style.css";
 import { motion, useAnimation } from "framer-motion";
 import ParalaxCard from "./Cards/firstCard";
 import SecondCard from "./Cards/SecondCard";
