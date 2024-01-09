@@ -49,9 +49,9 @@ export default function App() {
   };
   return (
     <div>
-      <section class="parallax__group">
-        <div class="parallax__layer parallax__layer--background"></div>
-        <div class="parallax__layer parallax__layer--foreground ">
+      <section className="parallax__group">
+        <div className="parallax__layer parallax__layer--background"></div>
+        <div className="parallax__layer parallax__layer--foreground ">
           <div className="grid md:grid-cols-1 lg:grid-cols-3 p-4 container ">
           <ParalaxCard/>
           <SecondCard/>

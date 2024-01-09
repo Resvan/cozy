@@ -24,6 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    box-sizing: border-box;
 }
 
 @-webkit-keyframes leap {
@@ -55,4 +56,6 @@ body {
   box-shadow: 0 20px 50px -45px #333;
   max-width: 600px;
 }
+
+
 
