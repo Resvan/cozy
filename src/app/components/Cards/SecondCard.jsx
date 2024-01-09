@@ -1,5 +1,5 @@
 import React from "react";
-import "./stye.css";
+import "./style.css";
 import { motion, useAnimation } from "framer-motion";
 
 export default function SecondCard() {
