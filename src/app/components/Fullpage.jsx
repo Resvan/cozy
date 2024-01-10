@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { KeyboardArrowRightOutlined } from "@mui/icons-material";
 
@@ -24,7 +24,7 @@ function Fullpage() {
 
 
 
-  const textRef = useRef(null);
+  const textRef = React.useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
