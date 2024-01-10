@@ -3,6 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Carousel() {
   const controls = useAnimation();
@@ -125,8 +127,8 @@ export default function Carousel() {
         </motion.div>
       </div>
       <div className="mx-10 space-x-10">
-        <button onClick={() => swipeToImage(-1)}>PREV</button>
-        <button onClick={() => swipeToImage(1)}>NEXT</button>
+        <button onClick={() => swipeToImage(-1)}><ArrowBackIcon/></button>
+        <button onClick={() => swipeToImage(1)}><ArrowForwardIcon/></button>
       </div>
     </div>
   );
