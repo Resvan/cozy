@@ -46,7 +46,7 @@ function Fullpage() {
       <div className='w-2/4 flex flex-col justify-center items-end relative'>
             <div className='w-[30rem]'>
                 <p className='text-5xl font-semibold'>Our culture</p>
-                <p className='mt-4 text-3xl' style={{fontFamily:"playfair"}}>We combine technology with human ingenuity to solve some of the world's biggest challenges. When you work with us, the possibilities are endless.</p>
+                <p className='mt-4 text-3xl' style={{fontFamily:"playfair"}}>We combine technology with human ingenuity to solve some of the world&apos;s biggest challenges. When you work with us, the possibilities are endless.</p>
                 <div className='mt-8 flex items-end'>
                     <p className='text-white text-xl font-medium'>Join us</p>
                     <div className='flex justify-center items-center h-6 w-6 bg-violet-700 ml-4'>
