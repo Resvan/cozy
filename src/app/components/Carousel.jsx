@@ -128,7 +128,7 @@ export default function Carousel() {
       </div>
       <div className="mx-10 space-x-10">
         <button onClick={() => swipeToImage(-1)}><ArrowBackIcon/></button>
-        <button onClick={() => swipeToImage(1)}><ArrowForwardIcon/></button>
+        <button onClick={() => swipeToImage(1)}><ArrowForwardIcon/></button> 
       </div>
     </div>
   );

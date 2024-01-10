@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 export default function SlideCards1() {
   const controls = useAnimation();
   const slideText = useAnimation();
-  const controls1 = useAnimation();
+  const scaleControls = useAnimation();
   const handleHover = () => {
     controls.start({
       y: "100%",
