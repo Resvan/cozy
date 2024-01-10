@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 import { motion, useAnimation } from "framer-motion";
@@ -6,6 +6,7 @@ export default function SlideCards1() {
   const controls = useAnimation();
   const slideText = useAnimation();
   const controls1 = useAnimation();
+  const [clicked, setClicked] = useState(false)
   const handleHover = () => {
     controls.start({
       y: "100%",
@@ -21,9 +22,28 @@ export default function SlideCards1() {
     controls.start({ y: 0, x: 0, scale: 1.1, filter: "blur(0)", opacity: 1 });
     slideText.start({ x: 100, opacity: 0 });
   };
+
+const handleClick=()=>
+{
+  
+
+  if(clicked){
+    handleLeave()
+
+    setClicked(!clicked)
+  }
+  else{
+    handleHover()
+
+    setClicked(!clicked)
+
+  }
+}
+
   return (
     <div className="">
       <motion.div
+      onClick={handleClick}
         onHoverStart={handleHover}
         onHoverEnd={handleLeave}
         className=" "
