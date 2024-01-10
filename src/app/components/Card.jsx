@@ -18,7 +18,7 @@ const Card = () => {
     },
   };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-14 ">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto ">
       <div className="">
         <SlideCards1 />
       </div>
@@ -37,6 +37,7 @@ const Card = () => {
       <div>
         <SlideCards1 />
       </div>
+
     </div>
   );
 };

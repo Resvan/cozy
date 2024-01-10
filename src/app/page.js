@@ -24,5 +24,7 @@ export default function Home() {
       <ContactForm/>
       <Footer/>
     </>
+
+
   );
 }
