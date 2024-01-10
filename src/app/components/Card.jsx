@@ -7,52 +7,37 @@ const Card = () => {
   const defaultAnimations = {
     hidden: {
       opacity: 0,
-      x:100
+      x: 100,
     },
     visible: {
       opacity: 1,
-      x:0,
+      x: 0,
       transition: {
         duration: 1,
       },
     },
   };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 ">
-    <div className="">
-    <SlideCards1/>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
+      <div className="">
+        <SlideCards1 />
+      </div>
+      <div>
+        <SlideCards1 />
+      </div>
+      <div>
+        <SlideCards1 />
+      </div>
+      <div>
+        <SlideCards1 />
+      </div>
+      <div>
+        <SlideCards1 />
+      </div>
+      <div>
+        <SlideCards1 />
+      </div>
     </div>
-<div>
-<SlideCards1/>
-
-</div>
-<div>
-<SlideCards1/>
-
-</div>
-<div>
-<SlideCards1/>
-
-</div>
-<div>
-<SlideCards1/>
-
-</div>
-<div>
-<SlideCards1/>
-
-</div>
-<div>
-<SlideCards1/>
-
-</div>
-<div>
-<SlideCards1/>
-
-</div>
-
- </div>
-
   );
 };
 
