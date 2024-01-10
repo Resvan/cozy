@@ -1,12 +1,13 @@
 
 import React from 'react'
 import "./style.css"
+
 import { motion, useAnimation } from "framer-motion";
 export default function SlideCards1() {
 
   const controls = useAnimation();
   const slideText = useAnimation();
-
+  const controls1 = useAnimation();
   const handleHover = () => {
     controls.start({ y: '100%',x:"50%", scale: 2.2, filter: 'blur(8px)', opacity: 0 });
     slideText.start({ x:0, opacity: 1 });
@@ -20,16 +21,18 @@ export default function SlideCards1() {
 
   };
   return (  
+
+    <div className='  '>
 <motion.div
  onHoverStart={handleHover}
  onHoverEnd={handleLeave}
 
 className=" p-8 ">
 
-<div className="p-2  bg-gradient-to-b to-black via-dark-blue-800 from-blue-950 -z-10"
+<div className="p-2 relative bg-gradient-to-b to-black via-dark-blue-800 from-blue-950 -z-10"
     style={{
      
-      position: 'absolute',
+      position: '',
       overflow: 'hidden',
       width: '300px',
       height: '400px',
@@ -38,7 +41,7 @@ className=" p-8 ">
   >
     <motion.div
     className=""
-      initial={{ y: '100%' }}
+      initial={{ y: 0}}
       animate={controls}
       transition={{ duration: 0.5 }}
       style={{
@@ -68,19 +71,21 @@ className=" p-8 ">
       <h2 className='uppercase text-xl font-bold'>powered for change</h2>
 
       <motion.p
-      initial={{ x: 100, opacity: 1 }}
+      initial={{ x: 300, opacity: 0 }}
       animate={slideText}
       transition={{ duration: 0.5 }}
       
       className='p-3'>Decarbonization requires collaboration. So what if all net zero investments were synchronized? We outline key actions each industry needs to take to ensure an equitable, affordable and sustainable energy transition.</motion.p>
     </motion.div>
+
+
 </div>
 
   </div>
 
 
 </motion.div>
-  
+</div>
 
   )
 }
