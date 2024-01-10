@@ -33,8 +33,8 @@ export default function SlideCards1() {
           style={{
             position: "",
             overflow: "hidden",
-            width: "300px",
-            height: "400px",
+            width: "28vw",
+            height: "75vh",
           }}
         >
           <motion.div
