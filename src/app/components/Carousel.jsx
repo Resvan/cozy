@@ -81,15 +81,8 @@ export default function Carousel() {
               <motion.div
                 key={imageCount}
                 style={{
-                  backgroundImage: data[activeImageIndex]["image"],
+                  backgroundImage: `url(${data[activeImageIndex]["image"]})`,
                 }}
-                children={[
-                  <Image
-                    src={data[activeImageIndex]["image"]}
-                    layout="fill"
-                    objectFit="cover"
-                  />,
-                ]}
                 custom={direction}
                 variants={sliderVariants}
                 initial="incoming"
@@ -101,7 +94,13 @@ export default function Carousel() {
                 dragElastic={1}
                 onDragEnd={(_, dragInfo) => dragEndHandler(dragInfo)}
                 className="image"
-              />
+              >
+                <Image
+                  src={data[activeImageIndex]["image"]}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </motion.div>
             </AnimatePresence>
           </motion.div>
         </div>
@@ -132,4 +131,3 @@ export default function Carousel() {
     </div>
   );
 }
-
