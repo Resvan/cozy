@@ -46,47 +46,19 @@ export default function App() {
     console.log("Div clicked!");
   };
   return (
-    <div>
-      <section className="parallax__group">
-        <div className="parallax__layer parallax__layer--background"></div>
-        <div className="parallax__layer parallax__layer--foreground ">
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 p-4 container ">
-          <ParalaxCard/>
-          <SecondCard/>
-          <ThirdCard/>
-
-         
-
-        
-          </div>
+    <div className="flex  justify-center mt-80">
+    <div className="container ">
+          <section className="parallax__group ">
+            <div className="parallax__layer parallax__layer--background"></div>
+            <div className="parallax__layer parallax__layer--foreground lg:flex lg:justify-center container">
+              <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 container">
+                <ParalaxCard />
+                <SecondCard />
+                <ThirdCard />
+              </div>
+            </div>
+          </section>
         </div>
-
-        <motion.div
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          className=" m-8  h-80  w-72 col-start-1 bg-violet-900"
-        >
-          <div className="font-serif inset-x-0 h-full bottom-0 text-2xl flex items-end">
-            <p className="p-5">
-              We’re one of Fortune’s World’s Most Admired Companies
-            </p>
-          </div>
-        </motion.div>
-      </section>
-
-      <motion.div
-        whileHover={{ scale: 1.2 }}
-        whileTap={{ scale: 0.9 }}
-        transition={{ type: "spring", stiffness: 400, damping: 17 }}
-        className=" m-8  h-80  w-72 col-start-1 bg-violet-900"
-      >
-        <div className="font-serif inset-x-0 h-full bottom-0 text-2xl flex items-end">
-          <p className="p-5">
-            We’re one of Fortune’s World’s Most Admired Companies
-          </p>
         </div>
-      </motion.div>
-    </div>
   );
 }
