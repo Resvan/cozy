@@ -205,13 +205,13 @@ const ContactForm = () => {
               <p>
                 <ForwardToInboxOutlined className="text-[#82D5F7]" />
               </p>
-              <p className="ml-5 text-xl font-thin">info@example.com</p>
+              <p className="ml-5 text-xl font-thin">cozyfolks.in@gmail.com</p>
             </div>
             <div className="flex">
               <p>
                 <PhoneOutlined className="text-[#82D5F7]" />
               </p>
-              <p className="ml-5 text-xl font-thin">+1 5589 55488 55s</p>
+              <p className="ml-5 text-xl font-thin">+91 884 876 3423</p>
             </div>
         </div>
         <form onSubmit={formik.handleSubmit}>
