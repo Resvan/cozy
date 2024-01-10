@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "./style.css";
 
 import { motion, useAnimation } from "framer-motion";
-export default function SlideCards1() {
+export default function SlideCards1(props) {
+  console.log(props,"title");
   const controls = useAnimation();
   const slideText = useAnimation();
-  const controls1 = useAnimation();
+  const controls1 = useAnimation(); 
   const [clicked, setClicked] = useState(false)
   const handleHover = () => {
     controls.start({
@@ -13,6 +14,8 @@ export default function SlideCards1() {
       x: "50%",
       scale: 2.2,
       filter: "blur(8px)",
+
+      
       opacity: 0,
     });
     slideText.start({ x: 0, opacity: 1 });
@@ -49,7 +52,7 @@ const handleClick=()=>
         className=" "
       >
         <div
-          className="relative bg-gradient-to-b to-black via-dark-blue-800 from-blue-950 -z-10"
+          className={`relative bg-gradient-to-b ${props?.color}  -z-10`}
           style={{
             position: "",
             overflow: "hidden",
@@ -67,7 +70,7 @@ const handleClick=()=>
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundImage: `url(https://dynamicmedia.accenture.com/is/image/accenture/Accenture-Powered-For-Change-Hero-3840x2160%3Arad-5x3?ts=1701776318778&dpr=off)`,
+              backgroundImage: `url(${props.image})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -82,9 +85,9 @@ const handleClick=()=>
                 padding: "20px",
               }}
             >
-              <h2 className="uppercase font-bold">Research Report</h2>
-              <h2 className="uppercase text-xl font-bold">
-                powered for change
+              {/* <h2 className="uppercase font-bold">Research Report</h2> */}
+              <h2 className="uppercase text-xl font-bold p-2">
+             {props?.title}
               </h2>
 
               <motion.p

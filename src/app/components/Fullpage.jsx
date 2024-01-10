@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { KeyboardArrowRightOutlined } from "@mui/icons-material";
 
@@ -21,6 +21,47 @@ function Fullpage() {
     [1, 0.5, 0.1, 0],
     [0, 0, 0, 0]
   );
+
+
+
+  const textRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = textRef.current;
+
+    const handleScroll = () => {
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        if (rect.top <= windowHeight * 0.75 && rect.bottom >= 0) {
+          if (!isVisible) {
+            // Element is in view, start animation
+            setIsVisible(true);
+          }
+        } else {
+          if (isVisible) {
+            // Element is out of view, reset visibility
+            setIsVisible(false);
+          }
+        }
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check on mount
+    handleScroll();
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isVisible]);
+
+
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2  gap-10 ">
@@ -43,7 +84,13 @@ function Fullpage() {
           />
         </motion.div>
       </div>
-      <div className=' flex flex-col justify-center items-center relative'>
+      <motion.div 
+       ref={textRef}
+       initial={{ opacity: 0, y: 50 }}
+       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+       transition={{ duration: 1.5 }}
+      
+      className=' flex flex-col justify-center items-center relative'>
             <div className='w-screen md:w-1/2'>
                 <p className='text-2xl md:text-5xl font-semibold'>Our culture</p>
                 <p className='mt-4 text-xl text-wrap' style={{fontFamily:"playfair"}}>We combine technology with human ingenuity to solve some of the world&apos;s biggest challenges. When you work with us, the possibilities are endless.</p>
@@ -54,7 +101,7 @@ function Fullpage() {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     </div>
   );
 }

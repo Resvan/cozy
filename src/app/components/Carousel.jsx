@@ -72,6 +72,17 @@ export default function Carousel() {
     setImageCount([imageId, changeDirection]);
   };
 
+
+
+
+
+
+
+
+
+
+
+  
   return (
     <div className="mt-16">
       <div className="grid grid-cols-1 md:grid-cols-2 h-full mb-10">
