@@ -61,7 +61,7 @@ className="p-2 relative bg-gradient-to-b to-black via-dark-blue-800 from-blue-95
 
       }}
     />
-<div className="">
+<div className=""> 
 <motion.div
       style={{
         position: 'relative',

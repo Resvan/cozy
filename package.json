@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "@popmotion/popcorn": "^0.4.4",
-    "framer-motion": "^10.17.9",
+    "framer-motion": "^10.17.12",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
