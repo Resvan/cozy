@@ -16,8 +16,11 @@
     overflow: hidden;
     position: relative;
   }
-  
+  .hoverscale{
+    scale: 100px;
+  }
   .card:hover {
+    scale: 100px;
     background-position: center bottom; /* Adjust the value for the slide-down distance */
   }
   

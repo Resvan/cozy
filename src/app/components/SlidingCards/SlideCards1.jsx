@@ -7,17 +7,17 @@ export default function SlideCards1() {
 
   const controls = useAnimation();
   const slideText = useAnimation();
-  const controls1 = useAnimation();
+  const scaleControls = useAnimation();
   const handleHover = () => {
     controls.start({ y: '100%',x:"50%", scale: 2.2, filter: 'blur(8px)', opacity: 0 });
     slideText.start({ x:0, opacity: 1 });
-
+    scaleControls.start({ scale: 1.04 });
   };
 
   const handleLeave = () => {
     controls.start({ y: 0, x:0,scale: 1.1, filter: 'blur(0)', opacity: 1 });
     slideText.start({ x:100, opacity: 0 });
-
+    scaleControls.start({ scale: 1 });
 
   };
   return (  
@@ -29,15 +29,20 @@ export default function SlideCards1() {
 
 className=" p-8 ">
 
-<div className="p-2 relative bg-gradient-to-b to-black via-dark-blue-800 from-blue-950 -z-10"
+<motion.div 
+//scale this div here on hover using framer  motion
+
+className="p-2 relative bg-gradient-to-b to-black via-dark-blue-800 from-blue-950  "
     style={{
-     
+   
       position: '',
       overflow: 'hidden',
       width: '300px',
       height: '400px',
   
     }}
+    animate={scaleControls}
+    transition={{ duration: 0.5 }}
   >
     <motion.div
     className=""
@@ -81,7 +86,7 @@ className=" p-8 ">
 
 </div>
 
-  </div>
+  </motion.div>
 
 
 </motion.div>
