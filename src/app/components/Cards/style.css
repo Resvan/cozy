@@ -126,7 +126,8 @@
     min-height: 10vh;
     min-height: max(10vh, var(--parallax-min-height));
     background-size: contain;
-    background-attachment: fixed; /* legacy browser fallback */
+    background-attachment: fixed;
+    background-position: top; /* legacy browser fallback */
     /* decorative styles unrelated to the parallax effect: */
     background-repeat: no-repeat;
     overflow: auto; /* Ensure the overflow is hidden to hide the shade outside the container */
