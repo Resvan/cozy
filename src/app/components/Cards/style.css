@@ -121,7 +121,7 @@
     position: sticky;
     z-index: -1;
     top: 0;
-    margin-top: 700px;
+    margin-top: 600px;
     height: 100%;
     min-height: 10vh;
     min-height: max(10vh, var(--parallax-min-height));
@@ -151,6 +151,7 @@
   body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
   .header, .footer, .content {
