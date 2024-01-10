@@ -29,7 +29,7 @@ function SlidingDivs() {
       <motion.div
         ref={parentRef}
         onMouseMove={handleMouseMove}
-        className="relative mt-10 text-3xl sm:text-5xl lg:text-6xl xl:text-8xl lg:txt-8xl text-nowrap uppercase text-center font-black rounded-lg"
+        className="relative mt-10 text-3xl sm:text-4xl  lg:text-5xl xl:text-8xl lg:txt-8xl text-nowrap uppercase text-center font-black rounded-lg"
       >
         <motion.div
           className="w-4/5 rounded-t-lg"
@@ -40,7 +40,7 @@ function SlidingDivs() {
             x: `${value}%`,
           }}
           transition={{ duration: 0.5 }}
-        >Reinvent What Your</motion.div>
+        >Redefine the potential</motion.div>
         <motion.div
           className="w-4/5 rounded-b-lg"
           initial={{
@@ -50,7 +50,7 @@ function SlidingDivs() {
             x: `${25 - value}%`,
           }}
           transition={{ duration: 0.5 }}
-        >Business Could Be</motion.div>
+        >of your enterprise</motion.div>
       </motion.div>
 
   );
