@@ -29,7 +29,7 @@ function SlidingDivs() {
       <motion.div
         ref={parentRef}
         onMouseMove={handleMouseMove}
-        className="relative container mx-auto mt-10 text-2xl lg:text-9xl text-nowrap uppercase text-center font-black rounded-lg"
+        className="relative mt-10 text-2xl lg:text-9xl text-nowrap uppercase text-center font-black rounded-lg"
       >
         <motion.div
           className="w-4/5 rounded-t-lg"

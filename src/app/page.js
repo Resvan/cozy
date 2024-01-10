@@ -1,5 +1,5 @@
 import Card from "./components/Card";
-// import ParalaxCard from "./components/Cards/firstCard";
+import Carousel from "./components/Carousel";
 import DynamicTransition from "./components/DynamicTransition";
 import Navbar from "./components/Navbar";
 import ParalaxCards from "./components/ParalaxCards";
@@ -15,7 +15,8 @@ export default function Home() {
         <Card />
       </div>
       <Value />
-      <ParalaxCards/>
+      <ParalaxCards />
+      <Carousel/>
     </>
   );
 }
