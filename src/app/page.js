@@ -11,21 +11,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    // <>
-    //   <Navbar />
-    //   <DynamicTransition />
-    //   <div className="container flex justify-center items-center mx-auto mt-10">
-    //     <Card />
-    //   </div>
-    //   <Value />
-    //   <ParalaxCards />
-    //   <Carousel/>
-    //   <Fullpage/>
-    //   <ContactForm/>
-    //   <Footer/>
-    // </>
-
-    <div className="box-border container mx-auto ">
+    <>
       <Navbar />
       <DynamicTransition />
       <div className="container flex justify-center items-center mx-auto mt-10">
@@ -33,10 +19,12 @@ export default function Home() {
       </div>
       <Value />
       <ParalaxCards />
-      <Carousel />
-      <Fullpage />
-      <ContactForm />
-      <Footer />
-    </div>
+      <Carousel/>
+      <Fullpage/>
+      <ContactForm/>
+      <Footer/>
+    </>
+
+
   );
 }

@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 export default function SlideCards1() {
   const controls = useAnimation();
   const slideText = useAnimation();
-  const scaleControls = useAnimation();
+  const controls1 = useAnimation();
   const handleHover = () => {
     controls.start({
       y: "100%",
@@ -22,19 +22,18 @@ export default function SlideCards1() {
     slideText.start({ x: 100, opacity: 0 });
   };
   return (
-    <div className="  ">
+    <div className="">
       <motion.div
         onHoverStart={handleHover}
         onHoverEnd={handleLeave}
         className=" "
       >
         <div
-          className="p-2 relative bg-gradient-to-b to-black via-dark-blue-800 from-blue-950 -z-10"
+          className="relative bg-gradient-to-b to-black via-dark-blue-800 from-blue-950 -z-10"
           style={{
             position: "",
             overflow: "hidden",
-            width: "28vw",
-            height: "75vh",
+            height: "70vh",
           }}
         >
           <motion.div
