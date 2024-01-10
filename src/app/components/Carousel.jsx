@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-export default function YourComponent() {
-    
+export default function Carousel() {
+
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 bg-white h-full mx-10 mb-10'>
       <div className='text-black relative'>
