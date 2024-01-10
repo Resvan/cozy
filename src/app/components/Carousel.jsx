@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
@@ -40,7 +40,7 @@ export default function Carousel() {
   };
 
   const sliderTransition = {
-    duration: 1,
+    duration: 5,
     ease: [0.56, 0.03, 0.12, 1.04],
   };
 
@@ -110,11 +110,11 @@ export default function Carousel() {
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={imageCount}
-              className="absolute top-0 left-0 w-full h-full flex items-center justify-end"
+              className="w-full h-full flex items-center justify-end"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
-              transition={{ duration: 0.9 }}
+              transition={{ duration: 2.5 }}
             >
               <div className="rounded-md w-1/2 mx-auto">
                 <h2 className="text-3xl mb-2">

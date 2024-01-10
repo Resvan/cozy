@@ -1,14 +1,16 @@
-'use client'
-import React from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import MenuIcon from "@mui/icons-material/Menu";
+import { IconButton } from "@mui/material";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
-
   const logoVariants = {
     initial: { opacity: 1 },
-    hover: {  x:50, width: 25, height: 25, transition: { duration: 0.5 } },
+    hover: { x: 50, width: 25, height: 25, transition: { duration: 0.5 } },
   };
 
   const textVariants = {
@@ -16,7 +18,10 @@ const Navbar = () => {
     hover: { opacity: 1 },
   };
 
+  const [open, setOpen] = useState(false);
+
   return (
+    <>
     <nav className="bg-black p-4">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo and text on the left side */}
@@ -31,14 +36,14 @@ const Navbar = () => {
             <Image
               src="/images/logo.png"
               alt="Logo"
-              width={40}  // Set your desired width
+              width={40} // Set your desired width
               height={40} // Set your desired height
               className="mr-2"
             />
           </motion.div>
           {/* Text */}
           <motion.span
-          style={{color:'#82D5F7'}}
+            style={{ color: "#82D5F7" }}
             className="font-bold text-2xl"
             variants={textVariants}
           >
@@ -63,8 +68,15 @@ const Navbar = () => {
           </motion.div>
           {/* Add more navigation options as needed */}
         </div>
+        <div className="md:hidden">
+          <button onClick={()=>setOpen(true)}>
+            <MenuIcon sx={{ fontSize: "3rem" }} />
+          </button>
+        </div>
       </div>
     </nav>
+    <MobileMenu open={open} handleClose={()=>setOpen(false)}/>
+    </>
   );
 };
 
