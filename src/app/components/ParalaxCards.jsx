@@ -41,20 +41,24 @@ export default function ParalaxCards() {
   };
 
   return (
-    <div className="flex  justify-center mt-80">
-<div className="container ">
-      <section className="parallax__group ">
-        <div className="parallax__layer parallax__layer--background"></div>
-        <div className="parallax__layer parallax__layer--foreground lg:flex lg:justify-center container">
-          <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 container">
-            <ParalaxCard />
-            <SecondCard />
-            <ThirdCard />
-          </div>
+  <>
+      <div className="flex  justify-center mt-80">
+    <div className="container ">
+          <section className="parallax__group ">
+            <div className="parallax__layer parallax__layer--background"></div>
+            <div className="parallax__layer parallax__layer--foreground lg:flex lg:justify-center container">
+              <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 container">
+                <ParalaxCard />
+                <SecondCard />
+                <ThirdCard />
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-    </div>
-    </div>
+        </div>
+  
+  </>
+    
     
   );
 }

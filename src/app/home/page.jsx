@@ -46,7 +46,8 @@ export default function App() {
     console.log("Div clicked!");
   };
   return (
-    <div className="flex  justify-center mt-80">
+    <>
+      <div className="flex  justify-center mt-80">
     <div className="container ">
           <section className="parallax__group ">
             <div className="parallax__layer parallax__layer--background"></div>
@@ -60,5 +61,7 @@ export default function App() {
           </section>
         </div>
         </div>
+
+</>
   );
 }
