@@ -4,8 +4,10 @@ import ContactForm from "./components/ContactForm";
 import DynamicTransition from "./components/DynamicTransition";
 import Navbar from "./components/Navbar";
 import ParalaxCards from "./components/ParalaxCards";
+import Fullpage from "./components/Fullpage";
 
 import Value from "./components/Value";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -18,7 +20,9 @@ export default function Home() {
       <Value />
       <ParalaxCards />
       <Carousel/>
+      <Fullpage/>
       <ContactForm/>
+      <Footer/>
     </>
   );
 }

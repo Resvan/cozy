@@ -3,6 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Carousel() {
   const controls = useAnimation();
@@ -81,15 +83,8 @@ export default function Carousel() {
               <motion.div
                 key={imageCount}
                 style={{
-                  backgroundImage: data[activeImageIndex]["image"],
+                  backgroundImage: `url(${data[activeImageIndex]["image"]})`,
                 }}
-                children={[
-                  <Image
-                    src={data[activeImageIndex]["image"]}
-                    layout="fill"
-                    objectFit="cover"
-                  />,
-                ]}
                 custom={direction}
                 variants={sliderVariants}
                 initial="incoming"
@@ -101,7 +96,13 @@ export default function Carousel() {
                 dragElastic={1}
                 onDragEnd={(_, dragInfo) => dragEndHandler(dragInfo)}
                 className="image"
-              />
+              >
+                <Image
+                  src={data[activeImageIndex]["image"]}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </motion.div>
             </AnimatePresence>
           </motion.div>
         </div>
@@ -126,8 +127,8 @@ export default function Carousel() {
         </motion.div>
       </div>
       <div className="mx-10 space-x-10">
-        <button onClick={() => swipeToImage(-1)}>PREV</button>
-        <button onClick={() => swipeToImage(1)}>NEXT</button>
+        <button onClick={() => swipeToImage(-1)}><ArrowBackIcon/></button>
+        <button onClick={() => swipeToImage(1)}><ArrowForwardIcon/></button> 
       </div>
     </div>
   );
