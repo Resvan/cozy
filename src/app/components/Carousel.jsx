@@ -2,17 +2,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
-import { wrap } from "@popmotion/popcorn"
-
+import { wrap } from "@popmotion/popcorn";
 
 export default function Carousel() {
-  const slideImage = useAnimation();
+  const controls = useAnimation();
 
   const data = [
     {
       image: "/images/innovation.jpg",
-      heading: "Heading ONE",
-      text: "Text ONE",
+      heading: "Mondelēz International’s Data and AI Transformation",
+      text: "The global snacking giant is laying a tasty foundation for reinvention and growth. Accenture is helping Mondelēz International to embrace the power of data and AI, build a strong digital core and implement interoperable cloud-enabled technology.",
     },
     {
       image: "/images/moon.png",
@@ -47,7 +46,7 @@ export default function Carousel() {
 
   const activeImageIndex = wrap(0, data.length, imageCount);
 
-  const swipeToImage = (swipeDirection) => {
+  const swipeToImage = async (swipeDirection) => {
     setImageCount([imageCount + swipeDirection, swipeDirection]);
   };
 
@@ -72,8 +71,8 @@ export default function Carousel() {
   };
 
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 h-full mx-10 mb-10">
+    <div className="mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 h-full mb-10">
         <div className="relative">
           <motion.div
             style={{ width: "45vw", height: "50vh", overflow: "hidden" }}
@@ -82,10 +81,14 @@ export default function Carousel() {
               <motion.div
                 key={imageCount}
                 style={{
-                  backgroundImage: data[activeImageIndex]['image'],
+                  backgroundImage: data[activeImageIndex]["image"],
                 }}
                 children={[
-                    <Image src={data[activeImageIndex]['image']} layout="fill" objectFit="cover" />
+                  <Image
+                    src={data[activeImageIndex]["image"]}
+                    layout="fill"
+                    objectFit="cover"
+                  />,
                 ]}
                 custom={direction}
                 variants={sliderVariants}
@@ -102,10 +105,25 @@ export default function Carousel() {
             </AnimatePresence>
           </motion.div>
         </div>
-        <div className="text-left">
-          <h2>{data[activeImageIndex]['heading']}</h2>
-          <p>{data[activeImageIndex]['text']}</p>
-        </div>
+        <motion.div className="rounded-md overflow-hidden relative">
+          <AnimatePresence initial={false} custom={direction}>
+            <motion.div
+              key={imageCount}
+              className="absolute top-0 left-0 w-full h-full flex items-center justify-end"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ duration: 0.9 }}
+            >
+              <div className="rounded-md w-1/2 mx-auto">
+                <h2 className="text-3xl mb-2">
+                  {data[activeImageIndex]["heading"]}
+                </h2>
+                <p>{data[activeImageIndex]["text"]}</p>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
       </div>
       <div className="mx-10 space-x-10">
         <button onClick={() => swipeToImage(-1)}>PREV</button>

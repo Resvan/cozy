@@ -1,5 +1,6 @@
 import Card from "./components/Card";
 import Carousel from "./components/Carousel";
+import ContactForm from "./components/ContactForm";
 import DynamicTransition from "./components/DynamicTransition";
 import Navbar from "./components/Navbar";
 import ParalaxCards from "./components/ParalaxCards";
@@ -17,6 +18,7 @@ export default function Home() {
       <Value />
       <ParalaxCards />
       <Carousel/>
+      <ContactForm/>
     </>
   );
 }
