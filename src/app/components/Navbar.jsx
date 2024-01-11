@@ -22,8 +22,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-black p-4">
-        <div className="container mx-auto flex items-center justify-between">
+      <nav className="bg-black p-4 sticky z-20 top-0">
+        <div className="container mx-auto flex items-center justify-between ">
           {/* Logo and text on the left side */}
           <motion.div
             className="items-center"
