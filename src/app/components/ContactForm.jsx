@@ -59,7 +59,7 @@ const ContactForm = () => {
       <p className="section-title text-4xl font-semibold mt-28 text-center pb-[30px]">
         CONTACT US
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-16 gap-40">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mx-16 p-5 gap-40">
         <div>
           <p className="text-3xl font-semibold">CozyFox</p>
           <p className=" pt-4">
