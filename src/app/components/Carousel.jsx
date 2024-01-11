@@ -137,7 +137,7 @@ export default function Carousel() {
           </AnimatePresence>
         </motion.div>
       </div>
-      <div className="mx-10 space-x-10">
+      <div className="mx-10 space-x-10 flex justify-center">
         <button onClick={() => swipeToImage(-1)}><ArrowBackIcon/></button>
         <button onClick={() => swipeToImage(1)}><ArrowForwardIcon/></button> 
       </div>

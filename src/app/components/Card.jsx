@@ -25,7 +25,7 @@ const logo="images/logo_card.jpeg"
     },
   };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto ">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto p-5">
       <div className="">
         <SlideCards1 title="IOS & Android Application" 
         image={android}
