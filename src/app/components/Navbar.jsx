@@ -48,6 +48,7 @@ const Navbar = () => {
                 COZY FOLKS
               </motion.span>
         </motion.div>
+        </motion.div>
           
           {/* Navigation options on the right side */}
           <div className="md:flex items-center space-x-4 hidden">
