@@ -8,15 +8,15 @@ import { IconButton } from "@mui/material";
 import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
-  // const logoVariants = {
-  //   initial: { opacity: 1 },
-  //   hover: { x: 50, width: 25, height: 25, transition: { duration: 0.5 } },
-  // };
+  const logoVariants = {
+    initial: { opacity: 1 },
+    hover: { x: 50, width: 25, height: 25, transition: { duration: 0.5 } },
+  };
 
-  // const textVariants = {
-  //   initial: { opacity: 0 },
-  //   hover: { opacity: 1 },
-  // };
+  const textVariants = {
+    initial: { opacity: 0 },
+    hover: { opacity: 1 },
+  };
 
   const [open, setOpen] = useState(false);
 
@@ -31,25 +31,25 @@ const Navbar = () => {
             animate="initial"
             whileHover="hover"
           >
-            {/* Logo */}
-            <motion.div className="flex">
-              <Image
-                src="/images/logo.png"
-                alt="Logo"
-                width={40} // Set your desired width
-                height={40} // Set your desired height
-                className="mr-2"
-              />
-              <motion.span
-                style={{ color: "#82D5F7" }}
-                className="font-bold text-2xl"
-              >
-                COZY FOLKS
-              </motion.span>
-            </motion.div>
-            {/* Text */}
+          {/* Logo */}
+          <motion.div variants={logoVariants}>
+            <Image
+              src="/images/bird_2.jpg"
+              alt="Logo"
+              width={40}  // Set your desired width
+              height={40} // Set your desired height
+              className="mr-2"
+            />
           </motion.div>
-
+          {/* Text */}
+          <motion.span
+            className="text-white font-semibold text-lg"
+            variants={textVariants}
+          >
+            Your Logo
+          </motion.span>
+        </motion.div>
+          
           {/* Navigation options on the right side */}
           <div className="md:flex items-center space-x-4 hidden">
             {/* Individual motion.div for each navigation item */}
