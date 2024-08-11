@@ -24,30 +24,31 @@ const Navbar = () => {
     <>
       <nav className="bg-black p-4 sticky z-20 top-0">
         <div className="container mx-auto flex items-center justify-between ">
-          {/* Logo and text on the left side */}
-          <motion.div
-            className="items-center"
-            initial="initial"
-            animate="initial"
-            whileHover="hover"
-          >
+        {/* Logo and text on the left side */}
+        <motion.div
+          className="items-center"
+          initial="initial"
+          animate="initial"
+          whileHover="hover"
+        >
           {/* Logo */}
           <motion.div variants={logoVariants}>
             <Image
-                src="/images/logo.png"
-                alt="Logo"
-                width={40} // Set your desired width
-                height={40} // Set your desired height
-                className="mr-2"
-              />
-              <motion.span
-                style={{ color: "#82D5F7" }}
-                className="font-bold text-2xl"
-                variants={textVariants}
-              >
-                COZY FOLKS
-              </motion.span>
-        </motion.div>
+              src="/images/logo.png"
+              alt="Logo"
+              width={40}  // Set your desired width
+              height={40} // Set your desired height
+              className="mr-2"
+            />
+          </motion.div>
+          {/* Text */}
+          <motion.span
+          style={{color:'#82D5F7'}}
+            className="font-bold text-2xl"
+            variants={textVariants}
+          >
+            COZY FOLKS
+          </motion.span>
         </motion.div>
           
           {/* Navigation options on the right side */}
