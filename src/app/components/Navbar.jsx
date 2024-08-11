@@ -34,20 +34,18 @@ const Navbar = () => {
           {/* Logo */}
           <motion.div variants={logoVariants}>
             <Image
-              src="/images/bird_2.jpg"
-              alt="Logo"
-              width={40}  // Set your desired width
-              height={40} // Set your desired height
-              className="mr-2"
-            />
-          </motion.div>
-          {/* Text */}
-          <motion.span
-            className="text-white font-semibold text-lg"
-            variants={textVariants}
-          >
-            Your Logo
-          </motion.span>
+                src="/images/logo.png"
+                alt="Logo"
+                width={40} // Set your desired width
+                height={40} // Set your desired height
+                className="mr-2"
+              />
+              <motion.span
+                style={{ color: "#82D5F7" }}
+                className="font-bold text-2xl"
+              >
+                COZY FOLKS
+              </motion.span>
         </motion.div>
           
           {/* Navigation options on the right side */}
