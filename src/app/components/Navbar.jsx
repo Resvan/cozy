@@ -43,6 +43,7 @@ const Navbar = () => {
               <motion.span
                 style={{ color: "#82D5F7" }}
                 className="font-bold text-2xl"
+                variants={textVariants}
               >
                 COZY FOLKS
               </motion.span>
